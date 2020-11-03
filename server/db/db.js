@@ -25,6 +25,7 @@ const User = db.define('user', {
   }
 });
 
+
 // instance methods
 User.prototype.correctPassword = function (candidatePassword) {
   return this.Model.encryptPassword(candidatePassword, this.salt) === this.password;
