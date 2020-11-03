@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 app.use(express.static(path.join(__dirname, '../public')))
 
 // // authentication router
-// app.use('/oauth', require('./oauth'))
+app.use('/auth', require('./auth'))
 
 
 // error handling middleware

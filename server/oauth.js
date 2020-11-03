@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const passport = require("passport");
-const { User } = require("./db");
+const { User } = require("./db/db.js");
 module.exports = router;
 // handles the callback after Google has authenticated the user (GET /auth/google/callback)
 // router.get(
