@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path')
-const session = requiere("express-session")
+const session = require("express-session")
 const passport = require("passport")
 const app = express()
 
@@ -32,6 +32,10 @@ app.get('/', (req, res) => {
 
 // static middleware
 app.use(express.static(path.join(__dirname, '../public')))
+
+// // authentication router
+// app.use('/oauth', require('./oauth'))
+
 
 // error handling middleware
 app.use((err, req, res, next) => {

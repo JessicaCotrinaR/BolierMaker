@@ -1,6 +1,6 @@
 const app = require('.')
 const PORT = 1337
-const {db} = require('./db')
+const {db} = require('../server/db/db')
 
 const init = async () => {
   try {

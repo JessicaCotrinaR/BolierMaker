@@ -3,7 +3,23 @@ const db = new Sequelize(process.env.DATABASE_URL || 'postgres://localhost:5432/
   logging: false
 })
 
-module.exports = db
+const User = db.define('users', {
+  email: {
+    type: Sequelize.STRING,
+    validate: {
+      isEmail: true
+    }
+  },
+  password: {
+    type: Sequelize.STRING
+  }
+})
+
+module.exports = {
+  db,
+  User
+}
+
 
 // create a file to build a 
 // sequelize instance, go ahead and start defining your models.
